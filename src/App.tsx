@@ -1,7 +1,20 @@
-export const App = () => {
-  return (
-    <>
-      <h1 className="text-red-500">hello world</h1>
-    </>
-  );
-};
+import { createBrowserRouter, RouterProvider } from 'react-router';
+import { Projects } from './pages/Projects';
+import { DefaultLayout } from './component/DefaultLayout';
+
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <DefaultLayout />,
+    children: [
+      {
+        path: '/projects',
+        element: <Projects />,
+      },
+    ],
+  },
+]);
+
+export function App() {
+  return <RouterProvider router={router} />;
+}
