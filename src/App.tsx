@@ -1,6 +1,7 @@
 import { createBrowserRouter, RouterProvider } from 'react-router';
 import { Projects } from './pages/Projects';
 import { DefaultLayout } from './component/DefaultLayout';
+import { CertificadoPages } from './pages/CertificadosPages';
 
 const router = createBrowserRouter([
   {
@@ -10,6 +11,10 @@ const router = createBrowserRouter([
       {
         path: '/projects',
         element: <Projects />,
+      },
+      {
+        path: '/certificates',
+        element: <CertificadoPages />,
       },
     ],
   },
